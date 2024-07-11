@@ -1,0 +1,441 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ .navbar{
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+} 
+  .navbar-brand img{
+    height:80px;
+    width: 200px;
+
+}  
+.fa-basket-shopping{
+    color:black;
+    font-size:30px ;
+    cursor: pointer;
+}
+.fa-user {
+    color: black;
+    font-size:30px ;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.login-button, .marketing .btn{
+    background-color: #6c8d3c;
+    color:#fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover, .marketing .btn:hover{
+
+    background-color:darkgreen ;
+    color: #fff;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    color: #666777;
+    font-weight: 500;
+     position: relative; 
+}
+
+.nav-link:hover, .nav-link.active{
+    color:black;
+}
+
+@media(min-width:991px){
+.nav-link::before{
+    content:"" ;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #6c8d3c;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+
+} 
+
+ .nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+} 
+
+}
+
+.dropdown-item:hover{
+    color: #6c8d3c;
+    background-color: #fff;
+}
+
+/* hero section */
+ .hero-section{
+    background: url(../images/cus.jpg) no-repeat center;
+    background-size: cover; 
+    width:100%;
+
+   
+}
+ .hero-section::before{
+    background-color: rgba(0,0,0,0.6);
+    content:"" ; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0;
+    left: 0;
+    height: 50vh;
+   
+}
+.hero-section .container{
+    height: 50vh;  
+    z-index: 1; 
+    position: relative; 
+
+}
+
+.container .contact-text{
+    margin-top: 5%;
+    position: relative;
+    font-weight: 300;
+    font-family: "Patua One", serif;
+}
+
+.container .contact-text::after{
+    content: "";
+    position: absolute;
+    display: block;
+    left: 1;
+    bottom: -10px;
+    width: 100%;
+    height: 1.5px;
+    background-color: #fff;
+}
+
+.hero-section .anchor{
+    margin-top: 10px;
+    font-size: 16px;
+} 
+.anchor a{
+    text-decoration: none;
+    color: #fff;
+}
+.anchor a:hover{
+    color: #6c8d3c;
+}  
+
+
+/* icon cart */
+.icon-cart{
+    position: relative;
+}
+
+.icon-cart span{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+}
+
+
+/* body */
+.contact{
+    position: relative;
+    /* min-height: 100vh; */
+    padding: 50px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.contact h4{
+    color: #6c8d3c;
+}
+
+.cont-container{   
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+}
+
+.cont-container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cont-container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+} 
+.cont-container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #6c8d3c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    color: #fff;
+}
+
+.cont-container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size:16px ;
+    flex-direction: column;
+}
+
+.contactForm{
+    width:40% ;
+    padding: 40px;
+
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input,.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin:10px 0 ;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin:10px 0 ;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~span,
+.contactForm .inputBox input:valid ~span,
+.contactForm .inputBox textarea:focus ~span,
+.contactForm .inputBox textarea:valid ~span{
+    color: #6c8d3c ;
+    font-size: 16px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #6c8d3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px ;
+    font-size: 18px;
+}
+
+@media(max-width:991px){
+    .contact{
+        padding: 50px;
+    }
+    .cont-container{
+        flex-direction: column;
+    }
+    .cont-container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .cont-container .contactInfo,
+    .contactForm{
+        width: 100%;
+    }
+
+}
+
+.map{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+
+
+
+/* Footer */
+footer{
+    width:100% ;
+    /* position: absolute; */
+    bottom: 0;  
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: sans-serif;
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap ;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.colu{
+    flex-basis: 25%;
+    padding:10px ;
+}
+.colu:nth-child(2),.colu:nth-child(3){
+    flex-basis: 15%;
+}
+.logo{
+    height: 70%;  
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.colu h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+footer ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.entermail{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+.entermail .fa-regular{
+    font-size: 18px;
+    margin-right: 10px;
+}
+.entermail input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+.entermail button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.entermail button .fa-solid {
+    font-size: 16px;
+    color: #ccc;
+}
+.social-icons .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    /* top: 25px; */
+    left: 0;
+    overflow: hidden;
+
+}
+
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+

@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name":" Shank Pushpi",
+        "price": 200,
+        "image": "../static/images/1.jpg"
+    },
+    {
+        "id": 2,
+        "name":" Aloe Vera",
+        "price": 250,
+        "image": "../static/images/2.jpg"
+    },
+    {
+        "id": 3,
+        "name":"Ashwagandha Churna",
+        "price": 290,
+        "image": "../static/images/3.jpg"
+    },
+    {
+        "id": 4,
+        "name":"Brahmi Vati",
+        "price": 200,
+        "image": "../static/images/4.jpg"
+    },
+    {
+        "id": 5,
+        "name":"Honey",
+        "price": 300,
+        "image": "../static/images/5.jpg"
+    },
+    {
+        "id": 6,
+        "name":"Hot Sip",
+        "price": 200,
+        "image": "../static/images/6.jpg"
+    },
+    {
+        "id": 7,
+        "name":"Triphala Churna",
+        "price": 200,
+        "image": "../static/images/7.jpg"
+    },
+    {
+        "id": 8,
+        "name":"Shatavari",
+        "price": 200,
+        "image": "../static/images/8.jpg"
+    }
+
+]

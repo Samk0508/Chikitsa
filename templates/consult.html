@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Consultation</title>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+      <!-- Bootstrap css -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha512-doJrC/ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrENF03M+TYBP92PnYUlXFH1ZW0FpLw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+      <!-- Font-Icon -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<link rel="stylesheet" href="static/css/consult.css">
+
+</head>
+<body>
+
+     <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand me-auto" href="/"><img src="{{ url_for('static', filename='images/logo.png') }}" alt=""></a>
+     
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="..static/images/logo.png" height="150px" width="150px"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2"href="/About">About Us</a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/Recommendation">Recommendation</a></li>
+                  <li><a class="dropdown-item" href="/Consult">Consultation</a></li>
+                  <li><a class="dropdown-item" href="/Yoga">Yoga</a></li>
+
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link mx-lg-2"href="/Shop">Shop</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link mx-lg-2" href="/Contacts">Contact Us</a>
+            </li>
+           
+          </ul>
+          
+        </div>
+      </div>
+      <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+      <a href="/Profile"><i class="fa-solid fa-user"></i></a> 
+      <a href="/Login" class="login-button" >Login</a>
+      <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+</nav>
+<!-- End navbar -->
+
+<!-- backgrount img -->
+<section class="hero-section">
+    <div class=" container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
+        <h2 class="contact-text">Consultation</h2>
+       
+        <!-- <a href="home.html">Home</a><p>// Contact Us</p> -->
+       
+         <div class="anchor">
+            <a href="/">Home &nbsp;</a> // &nbsp; consultation
+        </div> 
+        
+
+    </div>
+   
+</section>
+
+
+
+
+
+  <!-- About us -->
+  <section class="about">
+    <div class="row">
+      <div class="imgWrapper">
+        <img src="{{ url_for('static', filename='images/cbg.jpg') }}" alt="image">
+      </div>
+
+      <div class="contentWrapper">
+        <div class="content">
+          <span class="textWrapper">
+            <!-- <span>About Us</span> -->
+          </span>
+
+          <h2>Consultation</h2>
+          <p>The goal of an Ayurvedic consultation is to determine the individual's Ayurvedic Constitution (Prakriti) and imbalances (Vikriti). Based on this assessment, personalized healthcare plans are created, focusing on prevention and individualized lifestyle medicine.</p>
+          <p>Ayurvedic consultation plays a crucial role in Ayurvedic medicine. It involves a comprehensive assessment of an individual's health history, physical, psychological, physiological, and genetic makeup to create personalized healthcare plans. While Ayurveda is not licensed as a medical discipline in the United States, it can be used as a complementary therapy in combination with standard, conventional medical care. It's important to consult with a healthcare provider before starting any Ayurvedic treatments or therapies, especially in specific situations like pregnancy or nursing.</p>
+  
+        </div>
+      </div>
+    </div>
+  </section> 
+
+
+<!-- Doctor card -->
+  
+<section class="OurConsults">
+    <h1>Our consultants</h1>
+	<div class="consultant">
+        <!-- <h1 style="color: black ; margin-bottom: 50px; font-weight: bold;">Our consultants</h1> -->
+		<div class="card__container">
+		   <article class="card__article">
+			  <img src="{{ url_for('static', filename='images/d1.jpg') }}" alt="image" class="card__img">
+
+			  <div class="card__data">
+				 <!-- <span class="card__description">Vancouver Mountains, Canada</span> -->
+				 <h2 class="card__title">Julia</h2>
+				 <ul class="doctorinfo">
+					<li><i class="fa-solid fa-phone"></i>&nbsp; +91 9876543210</li>
+					<li><i class="fa-solid fa-envelope"></i> &nbsp;abcd@gmail.com</li>
+
+				 </ul>
+				
+			  </div>
+		   </article>
+
+		   <article class="card__article">
+			  <img src="{{ url_for('static', filename='images/d3.jpg') }}" alt="image" class="card__img">
+
+			  <div class="card__data">
+				 <!-- <span class="card__description">Poon Hill, Nepal</span> -->
+				 <h2 class="card__title">John</h2>
+				 <ul class="doctorinfo">
+					<li><i class="fa-solid fa-phone"></i>&nbsp; +91 9876543210</li>
+					<li><i class="fa-solid fa-envelope"></i> &nbsp;abcd@gmail.com</li>
+
+				 </ul>
+			  </div>
+		   </article>
+
+		   <article class="card__article">
+			  <img src="{{ url_for('static', filename='images/d2.jpg') }}" alt="image" class="card__img">
+
+			  <div class="card__data">
+				 <!-- <span class="card__description">Bojcin Forest, Serbia</span> -->
+				 <h2 class="card__title">Meloni</h2>
+				 <ul class="doctorinfo">
+					<li><i class="fa-solid fa-phone"></i>&nbsp; +91 9876543210</li>
+					<li><i class="fa-solid fa-envelope"></i> &nbsp;abcd@gmail.com</li>
+
+				 </ul>
+			  </div>
+		   </article>
+
+           
+		</div>
+	 </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer section -->
+  <footer>
+    <div class="row">
+      <div class="colu">
+        <img src="{{ url_for('static', filename='images/logo_footer.png') }}" alt="" class="logo">
+        <center>"CHIKITSA"</center>
+        <p>"Bridging Ancient Wisdom with Modern Science"</p>
+      </div>
+      <div class="colu">
+        <h3>Clinic<div class="underline"><span></span></div></h3>
+        <p>Bharati Vidyapeeths College Of Engineering,Kolhapur</p>
+        <p class="email-id">abc123@gmail.com</p>
+        <h5>+91 - 9876543210</h5>
+      </div>
+      <div class="colu">
+        <h3>Links<div class="underline"><span></span></div></h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/About">About Us</a></li>
+          <li><a href="/Shop">Shop</a></li>
+          <li><a href="/Contacts">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="colu">
+         <h3>Newsletter<div class="underline"><span></span></div></h3>
+         <form>
+           <i class="fa-regular fa-envelope"></i>
+           <input type="email" placeholder="Enter your email id" required>
+           <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+        </form> 
+        <div class="social-icons">
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+          <i class="fa-brands fa-pinterest"></i>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">Copyright © 2024 Chikitsa. All Right Reserved.</p>
+  </footer>
+<!-- End footer section -->
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+	
+</body>
+</html>	

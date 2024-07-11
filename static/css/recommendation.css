@@ -1,0 +1,427 @@
+.navbar{
+    background-color: #fff;
+    height: 80px;
+    /* margin: 20px; */
+    border-radius: 16px;
+    padding: 0.5rem;
+} 
+
+.navbar-brand img{
+    height:80px;
+    width: 200px;
+
+}  
+.fa-basket-shopping{
+    color:black;
+    font-size:30px ;
+    cursor: pointer;
+}
+.fa-user {
+    color: black;
+    font-size:30px ;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.login-button, .marketing .btn{
+    background-color: #6c8d3c;
+    color:#fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover, .marketing .btn:hover{
+
+    background-color:darkgreen ;
+    color: #fff;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    color: #666777;
+    font-weight: 500;
+     position: relative; 
+}
+
+.nav-link:hover, .nav-link.active{
+    color:black;
+}
+
+@media(min-width:991px){
+.nav-link::before{
+    content:"" ;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #6c8d3c;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+} 
+
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+} 
+}
+
+.dropdown-item:hover{
+    color: #6c8d3c;
+    background-color: #fff;
+}
+
+
+
+
+
+/* hero section */
+.hero-section{
+    background: url(../images/hero.jpg) no-repeat center;
+    background-size: cover; 
+    width: 100%;  
+}
+.hero-section::before{
+    background-color: rgba(0,0,0,0.6);
+    content:"" ; 
+    position: absolute; 
+    top: 11%; 
+    right: 0; 
+    bottom: 0;
+    left: 0;
+    height: 30vh;
+}
+
+.hero-section .container{
+    height: 30vh;  
+    z-index: 1; 
+    position: relative; 
+}
+
+.container .contact-text{
+    margin-top: 5%;
+    position: relative;
+}
+
+.container .contact-text::after{
+    content: "";
+    position: absolute;
+    display: block;
+    left: 1;
+    bottom: -10px;
+    width: 100%;
+    height: 1.5px;
+    background-color: #fff;
+}
+
+.hero-section .anchor{
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: 5%;
+} 
+.anchor a{
+    text-decoration: none;
+    color: #fff;
+}
+.anchor a:hover{
+    color: #6c8d3c;
+}  
+
+
+
+
+
+/* Recommendation */
+ .recommendation{
+    margin: 8% 200px 10% 200px;
+    background-color: #ecf0de;
+    border-radius: 5px;
+     /* display: flex; */
+}
+.header{
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+
+}
+.dropdownSymptom{
+    padding: 20px 30px 0 50px;
+} 
+
+
+.recommend{
+
+    border-radius: 5px;
+    background-color: #6c8d3c;
+    color: #fff;
+    margin:20px 0 30px 20%;
+    padding: 6px;
+    border:none ;
+    width:50% ;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+ .recommend:hover{
+    background-color: darkgreen;
+}
+
+
+.popupcontainer{
+    position: fixed;
+    top: 50%; 
+    left: 0px;
+    width: 0;
+    height: 0;
+    transform: translateY(-50%);
+    background:#fff;
+    overflow: hidden;
+    z-index: 2;
+    background-size: cover;
+    background-image: url(../images/bkg.jpg);
+}
+
+.popupcontainer .content{
+    padding: 50px 20px; 
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 100%;
+}
+.popupcontainer .content h2{
+    text-align: center;
+}
+
+.popupcontainer .content img{
+    margin:5% 0 5% 30%;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+}
+
+.popupcontainer .content .popup-close-btn{
+    position: absolute;
+    top: 0;
+    right: 31%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 35px;
+    color: #111;
+    font-size:30px ;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.popupcontainer .content .popup-close-btn:hover{
+    background: #eee;
+}
+
+.popupcontainer.active{
+    animation: popupAnimation 1500ms ease-in-out forwards;
+}
+.popupcontainer.active .content{
+    opacity: 1;
+    transition: all 300ms ease-in-out 1500ms;
+}
+
+
+
+.getconsult{
+
+    border-radius: 5px;
+    background-color: #6c8d3c;
+    color: #fff;
+    margin:50px 0 10px 150px;
+    padding: 6px;
+    border:none ;
+    width:50% ;
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+}
+
+ .getconsult:hover{
+    background-color: darkgreen;
+}
+
+
+
+
+
+@keyframes popupAnimation {
+    0%{
+        width: 0%;
+        height: 0%;
+    }
+    50%{
+        width: 100%;
+        height: 2px;
+    }
+    100%{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+
+
+/* Footer */
+footer{
+    width:100% ;
+    /* position: absolute; */
+    bottom: 0;  
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: sans-serif;
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap ;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.colu{
+    flex-basis: 25%;
+    padding:10px ;
+}
+.colu:nth-child(2),.colu:nth-child(3){
+    flex-basis: 15%;
+}
+.logo{
+    height: 70%;  
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.colu h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+footer ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.entermail{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+.entermail .fa-regular{
+    font-size: 18px;
+    margin-right: 10px;
+}
+.entermail input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+.entermail button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.entermail button .fa-solid {
+    font-size: 16px;
+    color: #ccc;
+}
+.social-icons .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    /* top: 25px; */
+    left: 0;
+    overflow: hidden;
+
+}
+
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+

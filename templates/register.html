@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login page</title>
+
+  <link rel="stylesheet" href="static/css/register.css">
+</head>
+
+<body>
+
+  <!-- register -->
+  <div class="wrapper">
+    <span class="icon-close"><a href="/"><ion-icon name="close"></ion-icon></a>
+    </span>
+    
+   
+
+    <div class="form-box register">
+      <h2>Sign-up</h2>
+      <form action="{{ url_for('register') }}" method="post">
+
+       
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox" required>
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="mail"></ion-icon></span>
+          <input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox" required>
+
+        </div>
+
+        <div class="input-box">
+          <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+          <input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"
+            required>
+        </div>
+
+       
+        <button type="submit" class="btn">Sign-up</button>
+
+        <div class="login-register">
+          <p>Already have an account?<a href="{{url_for('login')}}" class="login-link">Login</a></p>
+        </div>
+      </form>
+      <div class="msg" style="color: red; text-align: center;">{{ msg }}</div>
+    </div>
+  </div>
+
+</body>
+
+<script src="static/js/register.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</html>

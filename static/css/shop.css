@@ -1,0 +1,488 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+.navbar{
+    background-color: #fff;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+} 
+.navbar-brand img{
+    height:80px;
+    width: 200px;
+
+}  
+.fa-basket-shopping{
+    color:black;
+    font-size:30px ;
+    cursor: pointer;
+}
+.fa-user {
+    color: black;
+    font-size:30px ;
+    margin-right: 10px;
+    margin-left: 20px;
+}
+
+.login-button, .marketing .btn{
+    background-color: #6c8d3c;
+    color:#fff;
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s background-color;
+}
+
+.login-button:hover, .marketing .btn:hover{
+
+    background-color:darkgreen ;
+    color: #fff;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    color: #666777;
+    font-weight: 500;
+     position: relative; 
+}
+
+.nav-link:hover, .nav-link.active{
+    color:black;
+}
+
+@media(min-width:991px){
+.nav-link::before{
+    content:"" ;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #6c8d3c;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+} 
+
+.nav-link:hover::before, .nav-link.active::before{
+    width: 100%;
+    visibility: visible;
+} 
+}
+
+.dropdown-item:hover{
+    color: #6c8d3c;
+    background-color: #fff;
+}
+
+
+
+
+
+/* hero section */
+.hero-section{
+    background: url(../images/hero.jpg) no-repeat center;
+    background-size: cover; 
+    width: 100%;  
+}
+.hero-section::before{
+    background-color: rgba(0,0,0,0.6);
+    content:"" ; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    bottom: 0;
+    left: 0;
+    height: 50vh;
+}
+
+.hero-section .container{
+    height: 50vh;  
+    z-index: 1; 
+    position: relative; 
+}
+
+.container .contact-text{
+    margin-top: 5%;
+    position: relative;
+    font-weight: 300;
+    font-family: "Patua One", serif;
+}
+
+.container .contact-text::after{
+    content: "";
+    position: absolute;
+    display: block;
+    left: 1;
+    bottom: -10px;
+    width: 100%;
+    height: 1.5px;
+    background-color: #fff;
+}
+
+.hero-section .anchor{
+    margin-top: 10px;
+    font-size: 16px;
+} 
+.anchor a{
+    text-decoration: none;
+    color: #fff;
+}
+.anchor a:hover{
+    color: #6c8d3c;
+}  
+
+
+
+
+
+
+/*  Shop  */
+
+.shop .container{
+    width: 1000px;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+    transition: transform .5s;
+}
+
+svg{
+    width: 30px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.icon-cart{
+    position: relative;
+}
+
+.icon-cart span{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+}
+
+.shop .title{
+    font-size: xx-large;
+    font-weight: 300;
+    margin-left: 32%;
+    font-family: "Playfair Display", serif;
+}
+
+.listProduct .item img{
+    height: 150px;
+    width: 150px;
+    /* width: 100%; */
+    /* filter: drop-shadow(0 50px 20px #0009); */
+}
+
+.listProduct{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.listProduct .item{
+    background-color: #EEEEE6;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: large;
+}
+
+.listProduct .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+
+.listProduct .item button{
+    background-color: #353432;
+    color: #eee;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+}
+
+
+
+
+
+/* cart */
+.cartTab{
+    width: 400px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    /* top: 100px;
+    right: -400px;
+    bottom: 0;
+    left: auto; */
+    inset: 100px -400px 0 auto;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s; 
+}
+
+.showCart .cartTab{
+    /* top: 100px;
+    right: 0;
+    bottom: 0;
+    left: auto; */
+    inset: 100px 0 0 auto;
+}
+.showCart .container{
+    transform: translateX(-0px);
+}
+
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab .btn button{
+    background-color: #E8BC0E;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .btn .close{
+    background-color: #eee;
+}
+
+.cartTab .listCart .item img{
+    /* width: 100%; */
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.cartTab .listCart .item{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    /* cursor: auto; */
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+
+
+
+
+@media screen and (max-width: 992px) {
+    .listProduct{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 768px) {
+    .listProduct{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+
+
+/* Footer */
+footer{
+    width:100% ;
+    /* position: absolute; */
+    bottom: 0;  
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: sans-serif;
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap ;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.colu{
+    flex-basis: 25%;
+    padding:10px ;
+}
+.colu:nth-child(2),.colu:nth-child(3){
+    flex-basis: 15%;
+}
+.logo{
+    height: 70%;  
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.colu h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+footer ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+footer ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+form .fa-regular{
+    font-size: 18px;
+    margin-right: 10px;
+}
+form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+form button .fa-solid {
+    font-size: 16px;
+    color: #ccc;
+}
+.social-icons .fa-brands{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright{
+    text-align: center;
+}
+
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    /* top: 25px; */
+    left: 0;
+    overflow: hidden;
+
+}
+
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+}
+@keyframes moving{
+    0%{
+        left: -20px;
+    }
+    100%{
+        left: 100%;
+    }
+}
